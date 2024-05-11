@@ -7,11 +7,13 @@ var con = mysql.createConnection({
 });
 
 con.connect(function (err) {
+  // exception handling 
   if (err) throw err;
   console.log("Connected!");
   // query a database
   con.query(sql, function (err, result) {
     if (err) throw err;
+    // the result
     console.log("Result: " + result);
   });
 });
